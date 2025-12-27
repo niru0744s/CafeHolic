@@ -22,23 +22,27 @@ export const features = [
 export const menuItems = [
   {
     id: 1,
-    title: "Cappuccino",
-    description: "Smooth espresso with steamed milk and rich foam.",
-    price: "$4.50",
+    name: "Cappuccino",
+    description: "Rich espresso with steamed milk foam",
+    price: "₹160",
+    image: "/menu/cappuccino.png",
   },
   {
     id: 2,
-    title: "Latte",
-    description: "Creamy milk blended with freshly brewed espresso.",
-    price: "$4.00",
+    name: "Espresso",
+    description: "Strong and bold classic espresso",
+    price: "₹140",
+    image: "/menu/espresso.png",
   },
   {
     id: 3,
-    title: "Americano",
-    description: "Bold espresso diluted with hot water for a rich taste.",
-    price: "$3.50",
+    name: "Americano",
+    description: "Smooth espresso with hot water",
+    price: "₹150",
+    image: "/menu/americano.png",
   },
 ];
+
 
 export const blogs = [
   {
@@ -63,9 +67,9 @@ export const blogs = [
 
 
 export const navLinks = [
-  { id: 1, label: "Home", href: "#" },
-  { id: 2, label: "Menu", href: "#" },
-  { id: 3, label: "About", href: "#" },
-  { id: 4, label: "Blog", href: "#" },
-  { id: 5, label: "Contact", href: "#" },
+  { id: 1, label: "Home", href: "#home" },
+  { id: 2, label: "Menu", href: "#menu" },
+  { id: 3, label: "About", href: "#about" },
+  { id: 4, label: "Contact", href: "#contact" },
 ];
+

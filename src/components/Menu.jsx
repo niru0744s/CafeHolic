@@ -1,35 +1,38 @@
 import { menuItems } from "../data/componentData";
-import Button from "./reusableComponents/Button";
+import MenuCard from "./reusableComponents/MenuCard";
 
 export default function Menu() {
   return (
-    <section className="bg-[#f9f5f1] py-20 text-[#1f2933]">
-      <div className="mx-auto max-w-7xl px-4">
+    <section
+      id="menu"
+      className="relative bg-[#120c08] text-white overflow-hidden"
+    >
+      {/* ambient glow */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,174,102,0.08),transparent_60%)]" />
 
-        {/* Section Header */}
-        <div className="mb-14 text-center">
-          <h2 className="text-2xl font-bold md:text-3xl">
-            Our Popular Menu
+      <div className="relative mx-auto max-w-7xl px-4 py-24">
+
+        {/* Header */}
+        <div className="mb-16 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <h2 className="text-4xl font-semibold tracking-wide">
+            Our Menu
           </h2>
-          <p className="mt-3 text-sm text-black/70 md:text-base">
-            Explore our most loved coffee blends and handcrafted drinks.
-          </p>
+
+          <div className="flex gap-8 text-sm text-white/60">
+            <button className="text-primary">Classic</button>
+            <button className="hover:text-primary transition">Signature</button>
+            <button className="hover:text-primary transition">Bakery</button>
+          </div>
         </div>
 
-        {/* Products Grid */}
+        {/* Cards Grid */}
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-          {menuItems.map(item => (
-  <div key={item.id} className="rounded-2xl bg-white p-6 shadow-sm">
-    <div className="mb-4 h-40 rounded-xl bg-[#e7d3c1]" />
-    <h3 className="text-lg font-semibold">{item.title}</h3>
-    <p className="mt-2 text-sm text-black/70">{item.description}</p>
-    <div className="mt-4 flex items-center justify-between">
-      <span className="font-semibold">{item.price}</span>
-      <Button className="px-4 py-2 text-sm">Order</Button>
-    </div>
-  </div>
-))}
-        </div>
+  {menuItems.map(item => (
+    <MenuCard key={item.id} item={item} />
+  ))}
+</div>
+
+
       </div>
     </section>
   );
