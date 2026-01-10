@@ -4,9 +4,10 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
-export default function ContactSection() {
+export default function Contact() {
     return (
         <section
+        id="contact"
             className="relative overflow-hidden py-28"
             style={{
                 backgroundImage:
@@ -83,7 +84,8 @@ export default function ContactSection() {
 
                                 {/* Phone */}
                                 <TextField
-                                    label="Phone"
+                                    label="Email"
+                                    type="email"
                                     variant="standard"
                                     fullWidth
                                     InputLabelProps={{
@@ -107,8 +109,9 @@ export default function ContactSection() {
 
                                 {/* Email */}
                                 <TextField
-                                    label="Email"
+                                    label="message"
                                     variant="standard"
+                                    type="text"
                                     fullWidth
                                     InputLabelProps={{
                                         style: { color: "rgba(255,255,255,0.6)" },
@@ -129,29 +132,29 @@ export default function ContactSection() {
                                     }}
                                 />
                                 <Button
-  type="submit"
-  fullWidth
-  variant="contained"
-  sx={{
-    mt: 4,
-    py: 1.5,
-    borderRadius: "9999px",
-    backgroundColor: "#d4a373", // your primary orange
-    color: "#000",
-    fontSize: "0.875rem",
-    fontWeight: 500,
-    textTransform: "none",
-    boxShadow: "0 12px 30px rgba(0,0,0,0.5)",
-    "&:hover": {
-      backgroundColor: "#e0b185",
-    },
-    "&:active": {
-      transform: "scale(0.97)",
-    },
-  }}
->
-  Submit
-</Button>
+                                    type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                    sx={{
+                                        mt: 4,
+                                        py: 1.5,
+                                        borderRadius: "9999px",
+                                        backgroundColor: "#d4a373", // your primary orange
+                                        color: "#000",
+                                        fontSize: "0.875rem",
+                                        fontWeight: 500,
+                                        textTransform: "none",
+                                        boxShadow: "0 12px 30px rgba(0,0,0,0.5)",
+                                        "&:hover": {
+                                            backgroundColor: "#e0b185",
+                                        },
+                                        "&:active": {
+                                            transform: "scale(0.97)",
+                                        },
+                                    }}
+                                >
+                                    Submit
+                                </Button>
 
 
                             </div>

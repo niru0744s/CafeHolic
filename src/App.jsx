@@ -6,7 +6,7 @@ import Menu from './components/Menu'
 import SectionGroup from './components/SectionGroup'
 import OnlineOrderSection from './components/OnlineOrderSection'
 import CoffeeVarietiesSection from './components/CoffeeVarietiesSection'
-import ContactSection from './components/ContactSection'
+import Contact from './components/Contact'
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
       <Menu />
       <CoffeeVarietiesSection/>
       <OnlineOrderSection/>
-      <ContactSection/>
+      <Contact/>
       <Footer />
     </>
   )
